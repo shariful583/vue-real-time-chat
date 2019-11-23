@@ -19,8 +19,8 @@
     <div class="row" id="app">
         <div class="offset-3 col-6">
             <li class="list-group-item active">Chatting App</li>
-            <ul class="list-group v-chat-scroll">
-                <chat v-for="value in chat.msg" v-bind:key="value.index">@{{ value }}</chat>
+            <ul class="list-group" v-chat-scroll>
+                <chat v-for="value in chat.msg" v-bind:key="value.index" color="info">@{{ value }}</chat>
             </ul>
             <input type="text" class="form-control" placeholder="Type" v-model='message' v-on:keyup.enter='msg'>
         </div>
