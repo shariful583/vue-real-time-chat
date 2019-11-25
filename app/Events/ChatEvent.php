@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -25,8 +26,8 @@ class ChatEvent implements ShouldBroadcast
      */
     public function __construct($msg,User $user)
     {
-        return $this->msg = $msg;
-        return $this->user = $user;
+        $this->msg = $msg;
+        $this->user = $user;
     }
 
     /**
